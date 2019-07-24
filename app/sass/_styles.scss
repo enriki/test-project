@@ -51,6 +51,7 @@ header {
 
   background-size: contain;
   background-position: center top;
+  background-repeat: no-repeat;
   padding-top: 7.625rem; /* 122px */
   padding-bottom: 4.5rem;
 }
@@ -114,11 +115,24 @@ header {
   outline: 0;
 
   &_type_input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
     width: 32.4rem;
     font-size: 1.5rem;
     text-align: center;
     line-height: 3.625rem; /* 58px */
+    height: 3.625rem; /* 58px */
     padding: 0;
+
+    &::-webkit-input-placeholder {
+      color: #c8c8c8;
+    }
+
+    &:-ms-input-placeholder {
+      color: #c8c8c8 !important;
+    }
 
     &::placeholder {
       color: #c8c8c8;
@@ -137,8 +151,10 @@ header {
     font-size: 1.5rem;
     text-align: center;
     text-align-last: center;
+    -ms-text-align-last: center;
     padding: 0;
     line-height: 3.625rem; /* 58px */
+    height: 3.625rem; /* 58px */
 
     option {
       color: $text;
@@ -163,6 +179,18 @@ header {
     font-size: 1.25rem;
     line-height: 1;
     box-sizing: border-box;
+
+    &::-webkit-input-placeholder {
+      color: #c8c8c8;
+    }
+
+    &:-ms-input-placeholder {
+      color: #c8c8c8 !important;
+    }
+
+    &::placeholder {
+      color: #c8c8c8;
+    }
   }
 }
 
